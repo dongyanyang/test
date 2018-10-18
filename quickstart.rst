@@ -18,20 +18,18 @@ controller, and compute.
 - ``deployer node``: This is used for running local docker registry, package repo, and
   also where the kolla-ansible tool would be installed, configured and run.
 
-  System requirements to run this node:
+  System requirements:
    * Ubuntu 16.04/x86_64 platform
    * 1 network interfaces
    * 8GB main memory
    * 400GB disk space
 - ``controller node``: This is where the OpenStack controller services will be deployed onto.
-
   System requirements:
    * Ubuntu 16.04/x86_64 platform
    * 2 network interfaces
    * 8GB main memory
    * 40GB disk space
 - ``compute node``: This is where the OpenStack compute services will be deployed onto.
-
   System requirements:
    * Ubuntu 16.04/LinuxONE platform
    * 1 network interface
@@ -234,6 +232,7 @@ most of the required options for you, including:
 There are other options that are required to be specified as fit to your environment:
 
 ::
+
     # Set the kolla_internal_vip_address value to the IP address of your "network_interface" as set in the [control] section of
     # the inventory file.
     kolla_internal_vip_address: "YOURIP"
