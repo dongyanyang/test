@@ -16,20 +16,23 @@ The following three classes of nodes are defined in the architecture: deployer,
 controller, and compute.
 
 - ``deployer node``: This is used for running local docker registry, package repo, and
-   also where the kolla-ansible tool would be installed, configured and run. System
-   requirements to run this node:
+  also where the kolla-ansible tool would be installed, configured and run.
+
+  System requirements to run this node:
    * Ubuntu 16.04/x86_64 platform
    * 1 network interfaces
    * 8GB main memory
    * 400GB disk space
 - ``controller node``: This is where the OpenStack controller services will be deployed onto.
-   System requirements:
+
+  System requirements:
    * Ubuntu 16.04/x86_64 platform
    * 2 network interfaces
    * 8GB main memory
    * 40GB disk space
 - ``compute node``: This is where the OpenStack compute services will be deployed onto.
-   System requirements:
+
+  System requirements:
    * Ubuntu 16.04/LinuxONE platform
    * 1 network interface
    * 8GB main memory
@@ -184,10 +187,10 @@ Edit the first section of ``multinode`` with connection details of your environm
 
 Please customize the example contents to suit your own environment:
 
-- The network_interface value under the control and external-compute section should be the name of interface
+- The ``network_interface`` value under the ``control`` and ``external-compute`` section should be the name of interface
   which is used for the deployer to communicate with the controller or compute node respectively.
 - More than one compute node can be specified in the inventory file.
-- The``testcont`` and ``testcomp`` should be the hostname of the target controller node and compute node respectively.
+- The ``testcont`` and ``testcomp`` should be the hostname of the target controller node and compute node respectively.
   And the hostname must be resolvable on the deployer node, otherwise please specify the IP address and hostname pair
   in the /etc/hosts on the deployer node.
 
